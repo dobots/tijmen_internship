@@ -1,0 +1,13 @@
+digraph G {
+"map" -> "odom"[label=" Broadcaster: /gmapping\nAverage rate: 20.186\nBuffer length: 5.4\nMost recent transform: 1631873575.641\nOldest transform: 1631873570.241\n"];
+"base_link" -> "laser"[label=" Broadcaster: /laser_broadcaster\nAverage rate: 10.172\nBuffer length: 5.309\nMost recent transform: 1631873575.651\nOldest transform: 1631873570.342\n"];
+"odom" -> "base_link"[label=" Broadcaster: /rosbot_ekf\nAverage rate: 16.436\nBuffer length: 5.354\nMost recent transform: 1631873575.504\nOldest transform: 1631873570.15\n"];
+"camera_link" -> "camera_rgb_frame"[label=" Broadcaster: /camera_base_link1\nAverage rate: 10.166\nBuffer length: 5.312\nMost recent transform: 1631873575.647\nOldest transform: 1631873570.336\n"];
+"camera_link" -> "camera_depth_frame"[label=" Broadcaster: /camera_base_link\nAverage rate: 10.171\nBuffer length: 5.309\nMost recent transform: 1631873575.649\nOldest transform: 1631873570.34\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label=" Broadcaster: /camera_base_link3\nAverage rate: 10.171\nBuffer length: 5.309\nMost recent transform: 1631873575.682\nOldest transform: 1631873570.373\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label=" Broadcaster: /camera_base_link2\nAverage rate: 10.174\nBuffer length: 5.209\nMost recent transform: 1631873575.624\nOldest transform: 1631873570.415\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1631873575.6495924"[ shape=plaintext ] ;
+}->"camera_link";
+}
