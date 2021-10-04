@@ -39,3 +39,5 @@ In rosbot_description/src/rosbot_description/urdf/rosbot.gazebo the visualize pa
 In rosbot_description/src/rosbot_gazebo/launch there is a launch file husarion_simulation.launch that launches all the necessary files to run the robot in the simulated environment.
 
 In rosbot_description/src/rosbot_gazebo/rviz there is a maze_simulation.rviz file that will make sure all the necessary displays are there for the visualisation.
+
+For the projector you will need to add a picture in your /usr/share/gazebo-11/media/materials/textures folder. Right now it is called berghuis.jpg, and can also be found in the /home/tijmen/hus_ws/src/tijmen_internship/gazebo_vis/src folder. To change this picture because it is not of your liking you can add a different picture in the /usr/share/gazebo-11/media/materials/textures folder and change the name of the picture in the /home/tijmen/hus_ws/src/tijmen_internship/rosbot_description/src/rosbot_description/urdf/rosbot.gazebo file in lines 432 and 443. 
