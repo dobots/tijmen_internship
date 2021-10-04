@@ -415,5 +415,36 @@
       </plugin>
     </sensor>
   </gazebo>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <gazebo reference="projector_link">
+    <projector name="projector">
+      <pose>0 0 0 0 0 0</pose>
+      <texture>berghuis.jpg</texture>
+      <fov>1.5</fov>
+      <near_clip>0.001</near_clip>
+      <far_clip>10</far_clip>
+    </projector>
+  </gazebo>
+  <gazebo> 
+    <plugin name="controller" filename="libgazebo_ros_projector.so">
+      <projector>projector_link/projector</projector>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>15.0</updateRate>
+      <textureName>berghuis.jpg</textureName>
+      <!-- <filterTextureName>stereo_projection_pattern_filter.png</filterTextureName>   -->     
+      <textureTopicName>controller/image</textureTopicName>
+      <projectorTopicName>controller/projector</projectorTopicName> 
+    </plugin>
+  </gazebo> 
 
 </robot>
