@@ -1,0 +1,15 @@
+<launch>
+ <!-- Saving Video from ROSbag .................................................. -->
+
+  <arg name="camera_topic" default="/camera/rgb/image_raw"/>
+  <arg name="bag_file" default="/home/tijmen/gazebo_vids/2021-10-04-15-48-48.bag"/>
+  <arg name="image_location" default="/home/tijmen/gazebo_vids/frame%06i.png"/>
+  <arg name="image_type" default="compressed"/>
+
+  <node pkg="rosbag" type="play" name="rosbag" args="$(arg bag_file)"/>
+  <node name="extract" pkg="image_view" type="extract_images" respawn="false" output="screen">
+    <remap from="image" to="$(arg camera_topic)"/>
+    <param name="filename_format" value="$(arg image_location)"/>
+    <param name="image_transport" value="$(arg image_type)"/>
+  </node>
+</launch>

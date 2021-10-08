@@ -73,8 +73,12 @@
         <image>
           <width>640</width>
           <height>480</height>
-          <format>R8G8B8</format>
+         <format>R8G8B8</format>
         </image>
+    <!--    <update_rate>30</update_rate> -->
+        <save enabled="true">
+      	  <path>/home/tijmen/gazebo_vids/temp_video</path>
+      	</save>
         <depth_camera>
 
         </depth_camera>
@@ -107,6 +111,32 @@
       </plugin>
     </sensor>
   </gazebo>
+  
+  
+<!-- <gazebo reference="camera_link">
+  <sensor name='my_camera' type='camera'>
+          <camera>
+            <save enabled="false">
+              <path>/home/tijmen/gazebo_vids/tmp_video</path>
+            </save>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>10</update_rate>
+        </sensor>
+  </gazebo> -->
+  
+  
+  
+  
 
   <!-- If you cant't use your GPU comment RpLidar using GPU and uncomment RpLidar using CPU 
     gazebo plugin. -->

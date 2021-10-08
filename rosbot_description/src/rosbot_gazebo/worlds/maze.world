@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <sdf version='1.6'>
   <world name='default'>
     <light name='sun' type='directional'>
@@ -75,6 +76,7 @@
       </link>
       <pose frame=''>0.497681 0 0 0 -0 0</pose>
     </model>
+
     <state world_name='default'>
       <sim_time>2918 750000000</sim_time>
       <real_time>639 66738159</real_time>
