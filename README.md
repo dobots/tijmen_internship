@@ -41,3 +41,12 @@ In rosbot_description/src/rosbot_gazebo/launch there is a launch file husarion_s
 In rosbot_description/src/rosbot_gazebo/rviz there is a maze_simulation.rviz file that will make sure all the necessary displays are there for the visualisation.
 
 For the projector you will need to add a picture in your /usr/share/gazebo-11/media/materials/textures folder. Right now it is called berghuis.jpg, and can also be found in the /home/tijmen/hus_ws/src/tijmen_internship/gazebo_vis/src folder. To change this picture because it is not of your liking you can add a different picture in the /usr/share/gazebo-11/media/materials/textures folder and change the name of the picture in the /home/tijmen/hus_ws/src/tijmen_internship/rosbot_description/src/rosbot_description/urdf/rosbot.gazebo file in lines 432 and 443. 
+
+To be able to save the video stream for the Gazebo camera streams you will have to alter the openni camera plugin in the src/tijmen_internship/rosbot_description/src/rosbot_description/urdf/rosbot.gazebo file. Here you will have to set the save tag to true, and specify the path to which you want to save the images. To get a video out of the images run (with the correct path to your camera images)
+
+```
+ffmpeg -r 10 -pattern_type glob -i '/home/tijmen/gazebo_vids/temp_video/default_default_openni_camera_camera*.jpg' -c:v libx264 my_camera_video.mp4
+```
+
+### Augmented reality
+In order to run the simulation with augmented reality you will have to follow the Iviz tutorial. The stl files of the Husarion Robot have been changed to .dae files in order to be able to see them in Unity. 
