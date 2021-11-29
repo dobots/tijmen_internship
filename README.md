@@ -26,15 +26,15 @@ on your pc terminal.
 
 ## Rviz
 Both roslaunches as decribed above will launch iviz with the correct settings. In the left displays tab you can select which sensor data you want to show/hide. 
-Rviz image overview
-Rviz image detail
+![Rviz image overview](https://github.com/dobots/tijmen_internship/blob/main/media/iviz_screenshot.png)
+![Rviz image detail](https://github.com/dobots/tijmen_internship/blob/main/media/iviz_detail.png)
 
 ## Gazebo
 There are two main options of visualizing directly in Gazebo. The first one is the lidar sensor, and can be done by setting the `<visualize>` tag to true in `rosbot.gazebo`.
-Gazebo lidar image
+![Gazebo lidar image](https://github.com/dobots/tijmen_internship/blob/main/media/gazebo_lidar.png)
 
 To display the robot path you will have to run the`rosrun gazebo_visualize_path`node. This is a cpp node in the `gazebo_vis` folder. It makes use of ignition messages, and publishes a triangle list based on the poses of its PoseArray subscription.
-Gazebo path image
+![Gazebo path image](https://github.com/dobots/tijmen_internship/blob/main/media/gazebo_path.png)
 
 It is also possible to display an image using a projector. This can be done by uncommenting the `libgazebo_ros_projector.so` plugin in `rosbot_gazebo`. The image you want to display should be put in the `usr/share/gazebo-11/media/materials/textures` folder.
  
