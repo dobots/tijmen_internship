@@ -29,7 +29,7 @@
 
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rosbot_gazebo)/rviz/maze_simulation.rviz"/>
   
-  <node pkg="gazebo_vis" type="gazebo_visualize_path" name="gazebo_visualize_path"/>
+  <!-- <node pkg="gazebo_vis" type="gazebo_visualize_path" name="gazebo_visualize_path"/> -->
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping">
     <param name="base_frame" value="base_link"/>

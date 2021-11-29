@@ -285,14 +285,14 @@
   <!-- Orbbec Astra RGBD Camera -->
   <joint name="astra_joint" type="fixed">
     <axis xyz="0 0 0" />
-    <origin xyz="-0.03 0 0.18" rpy="0 0 0"/>
+    <origin xyz="-0.03 0 0.18" rpy="0 0 0"/> <!-- -0.03 0 0.18 rpy 0 0 0 -->
     <parent link="body_link"/> 
     <child link="camera_link"/>
   </joint>
 
   <link name="camera_link">
     <collision>
-      <origin xyz="0.02 0 0" rpy="0 0 0"/>
+      <origin xyz="0.02 0 0" rpy="0 0 0"/>  <!-- 0.02 0 0 rpy 0 0 0 -->
       <geometry>
         <box size="0.001 0.001 0.001"/>
       </geometry>
@@ -430,5 +430,70 @@
     
   </link>  
   
+ <!-- extra camera links to get 3 camera's for the kademuur in meshroom test -->
+ 
+    <!-- camera 1 link -->
+ <!-- <joint name="astra1_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="-0.03 0 0.98" rpy="0 -0.707 0"/> 
+    <parent link="body_link"/> 
+    <child link="camera1_link"/>
+  </joint>
+
+  <link name="camera1_link">
+    <collision>
+      <origin xyz="0.02 0 0" rpy="0 0 0"/>  
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.01 0 -0.03" rpy="1.5707 0 1.5707"/>
+      <geometry>
+        <mesh filename="package://rosbot_description/meshes/astra.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Black"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    
+  </link> 
+  
+   
+  <joint name="astra2_joint" type="fixed">
+    <axis xyz="0 0 0" />
+    <origin xyz="-0.03 0 1.68" rpy="0 -1.57 0"/> 
+    <parent link="body_link"/> 
+    <child link="camera2_link"/>
+  </joint>
+
+  <link name="camera2_link">
+    <collision>
+      <origin xyz="0.02 0 0" rpy="0 0 0"/>  
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.01 0 -0.03" rpy="1.5707 0 1.5707"/>
+      <geometry>
+        <mesh filename="package://rosbot_description/meshes/astra.dae" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="Black"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+    
+  </link> -->
 
 </robot>
